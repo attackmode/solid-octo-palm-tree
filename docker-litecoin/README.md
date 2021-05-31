@@ -1,6 +1,6 @@
 # Docker Litecoin 
 
-I have not built the Litecoin project, infact I'm a newbe to using it. I created a 
+I have not ever built the Litecoin project before, infact I'm a newbe to using it. I created a 
 rudimentary while loop to daemonise the service. Can be built with:
 
 ```
