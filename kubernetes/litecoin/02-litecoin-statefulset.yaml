@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: litecoin
+  namespace: litecoin
+spec:
+  selector:
+    matchLabels:
+      app: litecoin
+  serviceName: litecoin-svc
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: litecoin
+    spec:
+      containers:
+      - name: litecoin
+        #image would be from gitlab container repo
+        image: kraken/litecoin:0.18.1
+        volumeMounts:
+        - name: litecoin-pvc
+          mountPath: /usr/share/litecoin
+        ports:
+        - containerPort: 9333
+          name: litecoind
+          protocol: TCP
+        resources:
+          requests: 
+            memory: 128Mi
+            cpu: 1
+          limits:
+            memory: 256Mi
+            cpu: 2      
+  volumeClaimTemplates:
+  - metadata:
+      name: litecoin-pvc
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 1Gi

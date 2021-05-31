@@ -1,0 +1,5 @@
+bucket   = "ci-tfstate"
+key      = "iam/terraform.tfstate"
+region   = "eu-west-1"
+role_arn = "arn:aws:iam::kapaaaaaw!:role/kapaaaaaw!"
+dynamodb_table = "terraform-state-lock"

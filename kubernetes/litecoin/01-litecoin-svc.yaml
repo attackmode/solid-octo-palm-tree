@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: litecoin-svc
+spec:
+  type: ClusterIP
+  selector:
+    app: litecoin
+  ports:
+  - port: 9333
+    targetPort: 9333

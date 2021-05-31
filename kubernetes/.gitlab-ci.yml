@@ -1,0 +1,10 @@
+image: bitnami/kubectl:latest
+
+stages:
+  - deploy
+
+deployment:
+  stage: deploy
+  when: always
+  script:
+    - kubectl apply -f litecoin 
