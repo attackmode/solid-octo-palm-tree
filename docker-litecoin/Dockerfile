@@ -1,3 +1,4 @@
+#I wouldnt normally use latest. If this was in a prod env I would expect to use a hardend image with specific tag 
 FROM ubuntu:latest
 ARG  version=0.18.1
 ARG  arch=x86_64
