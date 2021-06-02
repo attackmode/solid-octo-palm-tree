@@ -1,6 +1,6 @@
-# IAM moddule example
+# IAM module example
 
-This Terraform code hasn't been tested against an AWS account yet and would need relative ARN's to be added were required.
+This Terraform code hasn't been tested against an AWS account yet and would need relative ARN's to be added where required.
 
 Within the `env_vars` dir further environments could be added, and additional users can be added to the `ci-user` array.
 
